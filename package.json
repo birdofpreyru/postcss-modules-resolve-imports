@@ -1,5 +1,5 @@
 {
-  "name": "postcss-modules-resolve-imports",
+  "name": "@dr.pogodin/postcss-modules-resolve-imports",
   "version": "1.4.0",
   "description": "Resolves ICSS imports",
   "main": "index.js",
