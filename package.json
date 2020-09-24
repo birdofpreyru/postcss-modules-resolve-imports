@@ -1,10 +1,10 @@
 {
   "name": "@dr.pogodin/postcss-modules-resolve-imports",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Resolves ICSS imports",
   "main": "index.js",
   "engines": {
-    "node": ">= 8"
+    "node": ">= 10.13.0 || >= 12.13.0 || >= 14"
   },
   "repository": {
     "type": "git",
@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "css-selector-tokenizer": "^0.7.0",
-    "icss-utils": "^4.1.1",
+    "icss-utils": "^5.0.0-rc.0",
     "minimist": "^1.2.0"
   },
   "scripts": {
