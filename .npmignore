@@ -1,7 +1,4 @@
-.editorconfig
-.gitignore
-.travis.yml
-scripts
+.*
 src
 test
-yarn.lock
+/postcss-modules-resolve-imports-*.tgz

@@ -23,6 +23,7 @@ module.exports = resolveDeps;
  * @see  https://en.wikipedia.org/wiki/Topological_sorting
  */
 function resolveDeps(ast, result) {
+  if (result.result) ({result} = result);
   const {
     from: selfPath,
     graph,

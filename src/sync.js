@@ -11,13 +11,17 @@
  * @see  http://api.postcss.org/AtRule.html#walkRules
  */
 
-const {plugin} = require('postcss');
 const postcss = require('postcss');
 const resolveDeps = require('./resolveDeps');
 
-const extractPlugin = plugin('extract-plugin', () => resolveDeps);
+const extractPlugin = () => ({
+  postcssPlugin: 'extract-plugin',
+  Root: resolveDeps,
+});
+extractPlugin.postcss = true;
 
-module.exports = plugin('postcss-modules-resolve-imports', resolveImportsPlugin);
+module.exports = resolveImportsPlugin;
+module.exports.postcss = true;
 
 /**
  * dangerouslyPrevailCyclicDepsWarnings
@@ -27,9 +31,13 @@ module.exports = plugin('postcss-modules-resolve-imports', resolveImportsPlugin)
  * resolve.modules
  */
 function resolveImportsPlugin({icssExports, resolve = {}} = {}) {
-  return resolveImports;
+  return {
+    postcssPlugin: 'postcss-modules-resolve-imports',
+    Root: resolveImports,
+  };
 
   function resolveImports(ast, result) {
+    if (result.result) ({result} = result);
     const graph = {};
     const processor = createProcessor(result.processor.plugins);
     const rootPath = ast.source.input.file;

@@ -1,6 +1,4 @@
-CSS Modules: Resolve Imports
-============================
-
+_A fork of [`postcss-modules-resolve-imports`](https://www.npmjs.com/package/postcss-modules-resolve-imports), upgraded to use latest versions of dependencies. Released to NPM as a new package [`@dr.pogodin/postcss-modules-resolve-imports`](https://www.npmjs.com/package/@dr.pogodin/postcss-modules-resolve-imports)_
 
 Transforms:
 
