@@ -16,7 +16,7 @@ const resolveDeps = require('./resolveDeps');
 
 const extractPlugin = () => ({
   postcssPlugin: 'extract-plugin',
-  Root: resolveDeps,
+  Once: resolveDeps,
 });
 extractPlugin.postcss = true;
 
@@ -33,7 +33,7 @@ module.exports.postcss = true;
 function resolveImportsPlugin({icssExports, resolve = {}} = {}) {
   return {
     postcssPlugin: 'postcss-modules-resolve-imports',
-    Root: resolveImports,
+    Once: resolveImports,
   };
 
   function resolveImports(ast, result) {

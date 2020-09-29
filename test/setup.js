@@ -7,7 +7,7 @@ const postcss = require('postcss');
 const cssmodulesLocalByDefault = require('postcss-modules-local-by-default');
 const cssmodulesExtractImports = require('postcss-modules-extract-imports');
 const cssmodulesScope = require('postcss-modules-scope');
-const cssmodulesValues = require('postcss-icss-values');
+const cssmodulesValues = require('@dr.pogodin/postcss-icss-values');
 const cssmodulesResolveImports = require('../index.js');
 
 const LOADER = {
