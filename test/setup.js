@@ -14,7 +14,7 @@ const LOADER = {
   values: () => cssmodulesValues,
   'local-by-default': () => cssmodulesLocalByDefault,
   'extract-imports': () => cssmodulesExtractImports,
-  scope: () => new cssmodulesScope({generateScopedName}),
+  scope: () => cssmodulesScope({generateScopedName}),
   self: () => cssmodulesResolveImports,
 };
 
